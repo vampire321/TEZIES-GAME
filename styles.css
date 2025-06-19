@@ -12,3 +12,11 @@
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }
+
+/* feat: create score tracking mechanism */
+/* Commit #4 | 2026-07-25 08:24:18 */
+@media (max-width: 768px) {
+  .create-score-tracking-mechanism {
+    padding: 0.5rem;
+  }
+}
