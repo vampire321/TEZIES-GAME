@@ -20,3 +20,10 @@
     padding: 0.5rem;
   }
 }
+
+/* docs: add game controls documentation */
+/* Commit #8 | 2026-07-25 08:24:20 */
+.add-game-controls-documentation {
+  display: flex;
+  gap: 1rem;
+}
