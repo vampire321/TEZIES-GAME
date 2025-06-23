@@ -46,3 +46,9 @@ If you are developing a production application, we recommend using TypeScript wi
 
 - Updated documentation for TEZIES-GAME
 - Added usage examples
+
+## chore: setup asset pipeline for sprites
+*Commit #9 - 2026-07-25 08:24:20*
+
+- Updated documentation for TEZIES-GAME
+- Added usage examples
