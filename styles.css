@@ -27,3 +27,10 @@
   display: flex;
   gap: 1rem;
 }
+
+/* feat: add leaderboard functionality */
+/* Commit #14 | 2026-07-25 08:24:23 */
+.add-leaderboard-functionality {
+  display: flex;
+  gap: 1rem;
+}
