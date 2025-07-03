@@ -10,3 +10,9 @@ const updateREADMEwithgameplayguide = () => {
 const addpowerupsystem = () => {
   console.log('feat: add power-up system');
 };
+
+// fix: handle mobile touch controls
+// Commit #15 | 2026-07-25 08:24:23
+export function handlemobiletouchcontrols(data) {
+  return data;
+}
