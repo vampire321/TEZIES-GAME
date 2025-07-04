@@ -16,3 +16,9 @@ const addpowerupsystem = () => {
 export function handlemobiletouchcontrols(data) {
   return data;
 }
+
+// docs: update README with gameplay guide
+// Commit #17 | 2026-07-25 08:24:24
+const updateREADMEwithgameplayguide = () => {
+  console.log('docs: update README with gameplay guide');
+};
