@@ -34,3 +34,10 @@
   display: flex;
   gap: 1rem;
 }
+
+/* refactor: separate game state management */
+/* Commit #16 | 2026-07-25 08:24:24 */
+.separate-game-state-management:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
