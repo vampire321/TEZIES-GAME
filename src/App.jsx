@@ -1,6 +1,7 @@
 import {useState} from "react"
 import Die from "/Die.jsx"
 export default function App(){
+
   const[randValue,setrandValue]=useState(generateAllNewDice())
 /*const randomNumber = Math.floor(Math.random() * 6)+1;
 return randomNumber;*/
@@ -19,13 +20,15 @@ return randomNumber;*/
   function generateAllNewDice(){
     return new Array(10)
       .fill(0)
-      .map(() => Math.ceil(Math.random() * 6))
+      .map(() => ({
+        value: Math.ceil(Math.random() * 6), 
+        isHeld:false}))
 }
 function rollDice(){
   setrandValue(generateAllNewDice())
 }
 /** map over dice here */
-const diceElements = randValue.map(num => <Die value={num} />)
+const diceElements = randValue.map(die => <Die value={die.value} isHeld={die.isHeld} />)
   return (
     <main>
     <div className="dice-container">
