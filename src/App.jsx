@@ -21,6 +21,9 @@ return randomNumber;*/
       .fill(0)
       .map(() => Math.ceil(Math.random() * 6))
 }
+function rollDice(){
+  setrandValue(generateAllNewDice())
+}
 /** map over dice here */
 const diceElements = randValue.map(num => <Die value={num} />)
   return (
@@ -28,6 +31,8 @@ const diceElements = randValue.map(num => <Die value={num} />)
     <div className="dice-container">
       {diceElements}
     </div>
+    <button className="roll-dice" onClick={rollDice}>Roll</button>
+
   </main>
   )
 }

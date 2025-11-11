@@ -3,8 +3,9 @@
 }
 
 body {
+    font-family : karla, sans-serif;
     margin: 0;
-    background-color: #0B2434;
+    background-color: #02111b;
     padding: 20px;
     height: 100vh;
     display: flex;
@@ -26,7 +27,7 @@ main {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -43,8 +44,18 @@ main {
     border-radius:10px;
     border:none;
     background-color: white;
-    font-family: Inter,sans-serif;
+    font-family: karla,sans-serif;
     font-size:1.75rem;
     font-weight:bold;
     cursor: pointer;
+}
+
+button.roll-Dice{
+    height: 50px;
+    width: 100px;
+    border: none;
+    border-radius: 6px;
+    background-color: #D17557;
+    color: white;
+    font-size: 1.2rem;
 }
