@@ -1,5 +1,6 @@
 import {useState} from "react"
 import Die from "/Die.jsx"
+import {nanoid} from "nanoid"
 export default function App(){
 
   const[randValue,setrandValue]=useState(generateAllNewDice())
@@ -22,13 +23,15 @@ return randomNumber;*/
       .fill(0)
       .map(() => ({
         value: Math.ceil(Math.random() * 6), 
-        isHeld:false}))
+        isHeld:false,
+        id: nanoid()
+      }))
 }
 function rollDice(){
   setrandValue(generateAllNewDice())
 }
 /** map over dice here */
-const diceElements = randValue.map(die => <Die value={die.value} isHeld={die.isHeld} />)
+const diceElements = randValue.map(dieObj => <Die key={dieObj.id} value={dieObj.value} isHeld={dieObj.isHeld} />)
   return (
     <main>
     <div className="dice-container">
