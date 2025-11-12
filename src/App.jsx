@@ -23,7 +23,7 @@ return randomNumber;*/
       .fill(0)
       .map(() => ({
         value: Math.ceil(Math.random() * 6), 
-        isHeld:false,
+        isHeld:true,
         id: nanoid()
       }))
 }
