@@ -4,6 +4,7 @@ import {nanoid} from "nanoid"
 
 export default function App(){
   const[randValue,setrandValue]=useState(generateAllNewDice())
+  
 /*const randomNumber = Math.floor(Math.random() * 6)+1;
 return randomNumber;*/
 // Create a new array (empty)
@@ -18,6 +19,17 @@ return randomNumber;*/
   }
   return newDice
       */
+     /*if(
+      randValue.every(die => die.isHeld)&&
+      randValue.every(die => die.value === randValue[0].value)
+     ){
+      console.log("You won!")
+     } INSTEAD OF PUTTING THE ENTIRE WIN CONDITION INSIDE AN IF, WE STORE IT IN AN VARIABLE(GAMEWON)
+      Reason 2: Used for changing UI
+      Reason 3: React needs values to trigger re-renders*/
+  const gameWon=
+    randValue.every(die=> die.isHeld)&&
+    randValue.every(die => die.value === randValue[0].value)
   function generateAllNewDice(){
     return new Array(10)
       .fill(0)
