@@ -4,7 +4,7 @@ import {nanoid} from "nanoid"
 import Confetti from "react-confetti"
 
 export default function App(){
-  const[randValue,setrandValue]=useState(generateAllNewDice())
+  const[randValue,setrandValue]=useState(() =>generateAllNewDice())
   
 /*const randomNumber = Math.floor(Math.random() * 6)+1;
 return randomNumber;*/
