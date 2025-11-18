@@ -41,11 +41,14 @@ return randomNumber;*/
       }))
 }
 function rollDice(){
+  if(!gameWon){
   setrandValue(oldDice => oldDice.map(die =>
     die.isHeld ? 
     die :
     {...die, value: Math.ceil(Math.random() * 6)}
-  ))
+  ))} else {
+    setrandValue(generateAllNewDice())
+  }
 }
 function hold(id){
   setrandValue(oldDice =>{
@@ -73,7 +76,7 @@ hold={() => hold(dieObj.id)}
     <div className="dice-container">
       {diceElements}
     </div>
-    <button className="roll-dice" onClick={rollDice}>{gameWon ? "New Game" : "Roll"}</button>
+    <button className="roll-dice" onClick={rollDice }>{gameWon ? "New Game" : "Roll"}</button>
 
   </main>
   )
