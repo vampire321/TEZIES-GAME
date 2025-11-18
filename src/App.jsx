@@ -1,8 +1,8 @@
 import {useState} from "react"
 import Die from "/Die.jsx"
 import {nanoid} from "nanoid"
-export default function App(){
 
+export default function App(){
   const[randValue,setrandValue]=useState(generateAllNewDice())
 /*const randomNumber = Math.floor(Math.random() * 6)+1;
 return randomNumber;*/
@@ -23,17 +23,39 @@ return randomNumber;*/
       .fill(0)
       .map(() => ({
         value: Math.ceil(Math.random() * 6), 
-        isHeld:true,
+        isHeld:false,
         id: nanoid()
       }))
 }
 function rollDice(){
-  setrandValue(generateAllNewDice())
+  setrandValue(oldDice => oldDice.map(die =>
+    die.isHeld ? 
+    die :
+    {...die, value: Math.ceil(Math.random() * 6)}
+  ))
+}
+function hold(id){
+  setrandValue(oldDice =>{
+    return oldDice.map(die =>{
+      return die.id===id ?
+      {...die,isHeld:!die.isHeld} : die
+    })
+  })
 }
 /** map over dice here */
-const diceElements = randValue.map(dieObj => <Die key={dieObj.id} value={dieObj.value} isHeld={dieObj.isHeld} />)
+const diceElements = randValue.map(dieObj => (
+<Die 
+key={dieObj.id} 
+value={dieObj.value} 
+isHeld={dieObj.isHeld}
+hold={() => hold(dieObj.id)}
+/>
+
+))
   return (
     <main>
+      <h1 className="title">Tenzies</h1>
+      <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
     <div className="dice-container">
       {diceElements}
     </div>
