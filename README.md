@@ -21,3 +21,10 @@ If you are developing a production application, we recommend using TypeScript wi
 #### Changes
 - Refactored module structure
 - Updated API documentation
+
+### feat: create score tracking mechanism
+> Commit #4 | 2026-07-24 22:56:17
+
+#### Changes
+- Refactored module structure
+- Updated API documentation
