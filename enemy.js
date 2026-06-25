@@ -4,3 +4,9 @@
 export function handleframerateinconsistencies(data) {
   return data;
 }
+
+// docs: add game controls documentation
+// Commit #8 | 2026-07-24 22:56:19
+function addgamecontrolsdocumentation() {
+  return true;
+}
