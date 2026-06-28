@@ -28,3 +28,9 @@ If you are developing a production application, we recommend using TypeScript wi
 #### Changes
 - Refactored module structure
 - Updated API documentation
+
+## chore: setup asset pipeline for sprites
+*Commit #9 - 2026-07-24 22:56:20*
+
+- Updated documentation for TEZIES-GAME
+- Added usage examples
