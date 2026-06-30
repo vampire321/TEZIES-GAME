@@ -34,3 +34,9 @@ If you are developing a production application, we recommend using TypeScript wi
 
 - Updated documentation for TEZIES-GAME
 - Added usage examples
+
+## feat: add power-up system
+*Commit #12 - 2026-07-24 22:56:21*
+
+- Updated documentation for TEZIES-GAME
+- Added usage examples
